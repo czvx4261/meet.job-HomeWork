@@ -1,0 +1,132 @@
+body{
+	margin: 0 auto;
+	height: 100%;
+}
+a{
+	color: #ffffff;
+	text-decoration: none; /* 不要底線 */
+	font-weight: bold; /* 粗字體 */
+}
+
+#wrapper{
+	min-height: 100%; /* 整個區塊高度 100%  */
+	margin-bottom: -100px; /* 等一下 footer 的高度會是 100px  */ 
+}
+#banner{
+	height: 70px;
+	width: 100%;
+}
+#logo{
+	float: left;
+	margin-left: 2em;
+}
+#logo img{
+	width: 100%;
+}
+#fb{
+	float: right;
+	margin-right: 1em;
+}
+#fb img{
+	width: 50%;
+}
+#ig{
+	float: right;
+}
+#ig img{
+	width: 50%;
+	margin-right: 1em;
+}
+#menu{
+	height: 50px;
+	width: 100%;
+	background-color:#DB7318 ; /* 背景顏色  */
+	color: #ffffff; /*區塊文字白色*/
+}
+#menu ul{
+	margin-left: 18%;
+	color: #ffffff;
+	padding-top: 10px;
+	font-size: 22px;
+}
+#menu li{
+	list-style:none ; /* 項目符號 不要出來  */
+	float: left; /* 浮板靠左 */
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+
+
+
+#content{
+	width: 100%;
+	min-height: 300px;
+	height: 900px;
+
+}
+#content a{
+	color: #000000;
+	font-weight: bold; /* 字體粗 */
+	font-size: 22px;
+}
+.Area1{
+	width: 50%;
+	height: 300px;
+	margin-left: 10%;
+	margin-top: 5%;
+	border-bottom: 1px solid #ccc;
+	border-right: 1px solid #ccc;
+	float: left;
+}
+.Area1 li{
+	font-size: 20px;
+	margin-left: 10%;
+	margin-top: 2%;
+}
+.Area3{
+	width: 50%;
+	height:350px;
+	margin-left: 10%;
+	border-right: 1px solid #ccc;
+	float: left;
+}
+.Area3 img{
+	width: 300px;
+	height: 300px;
+	float: left;
+	margin-top: 2%;
+}
+.Area3 li{
+	font-size: 20px;
+	margin-left: 35%;
+	margin-top: 3%;
+}
+.Area2{
+	width: 24%;
+	height: 750px;
+	float: right;
+	margin-right: 10%;
+	margin-top: 4%;
+}
+.Area2 img{
+	width: 450px;
+	height: 300px;
+}
+.Area2 p{
+	font-weight: bold; /* 粗字體 */
+	font-size: 23px;
+	text-align: center;
+
+}
+#footer{
+	width: 100%;
+	height: 150px;
+	background-color: #000000;
+	color: #ffffff;
+	text-align:center ; /* 文字置中  */
+	clear: both; /* 清除 float 效果  */
+}
+#footer span{
+	font-size: 20px;
+}
