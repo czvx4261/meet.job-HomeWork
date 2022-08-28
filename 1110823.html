@@ -1,0 +1,222 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<style type="text/css">
+		
+		body{
+			margin: 0;
+			padding: 0;
+		}
+
+		#wrapper{
+			min-height: 100%;
+			margin-bottom: -100px; 
+		}
+
+		#banner{
+			width: 100%;
+			height: 50px;
+		}
+		#menu{
+			width: 100%;
+			height: 40px;
+			background-color: #5460FA;
+			padding-left: 35%;
+		}
+		#menulist{
+			position: absolute;
+			height: 100px;
+			font-size: 25px;
+
+		}
+		#menulist , #menulist ul{
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+
+		#menulist li{
+			/*border-right: 1px solid #ffffff ;*/
+			list-style: none;
+			float: left;
+			
+		}
+		#menulist a{
+			margin-top: 8%;
+			display: block;
+			text-decoration: none;
+			width: 80px;
+		}
+		#menulist li ul{
+			position: absolute;
+			left: auto;
+			width: 100px;
+		}
+		.active{
+			background-color: #ff0000;
+		}
+		#content{
+			width: 100%;
+			min-height: 967px;
+			background-color: #09D68E;
+		}
+		#content img{
+			width: 100%;
+			height: 850px;
+		}
+		#content ul{
+			text-align: center;
+		}
+		#btn{
+			font-size: 22px;
+		}
+		#blue{
+			width: 100%;
+			height: 400px;
+			background-color:#2E2EFF ;
+		}
+		
+		#footer{
+			clear: both;
+			min-height: 100px;
+			background-color: #ffffff;
+		}
+		#footer input,#footer button{
+			font-size: 22px;
+		}
+		
+		
+
+
+
+	</style>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function(){
+
+			$("#menulist li ul").hide();
+			$("#menulist li").hover(
+
+				function(){
+
+					$(this).find("ul").slideDown("fast");
+					$(this).find("a:first").addClass("active");
+
+				},function(){
+
+					$(this).find(".submenu").fadeOut("fast");
+					$(this).find("a").removeClass("active");
+
+				}
+
+				)
+
+			$("#blue").hide();
+			$("#btn").click(function(){
+
+				$("#blue").slideToggle();
+				// .slideUp();  收起
+				// .slideDown() 放下
+				// .slideToggle(); 收放都有
+			});
+						
+		});
+
+function showAge(){
+
+	var age = document.getElementById("age").value;
+	if (age >= 15 && age <= 50 ){
+		alert("符合");
+	}else{
+		alert("不符合");
+	}
+
+}
+
+	</script>
+</head>
+<body>
+
+	<div id="wrapper">
+
+		<div id="banner">
+		</div>
+
+		<div id="menu">
+
+			<ul id="menulist">
+
+				<li>
+					<a href="#">產品</a>
+					<ul class="submenu">
+						<li><a href="#">汽車</a></li>
+						<li><a href="#">摩托車</a></li>
+						<li><a href="#">重機</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="#">美食</a>
+					<ul class="submenu">
+						<li><a href="#">滷肉飯</a></li>
+						<li><a href="#">意麵</a></li>
+						<li><a href="#">牛肉麵</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="#">新聞</a>
+					<ul class="submenu">
+						<li><a href="#">及時</a></li>
+						<li><a href="#">生活</a></li>
+						<li><a href="#">政治</a></li>
+					</ul>
+				</li>
+
+				<li>
+					<a href="#">服務</a>
+					<ul class="submenu">
+						<li><a href="#">line</a></li>
+						<li><a href="#">據點位置</a></li>
+						<li><a href="#">email</a></li>
+					</ul>
+				</li>		
+
+				<li><a href="#">聯絡</a></li>
+
+			</ul>
+
+
+		</div>
+
+		<div id="content">
+
+			<img src="https://t1.huishahe.com/uploads/allimg/20150518/139-1503131F955.jpg">
+
+			<button id="btn">區域折疊</button>
+			<div id="blue">
+			</div>	
+		</div>
+
+
+
+	</div>
+
+	<div id="footer">
+
+		<form onsubmit="showAge()">
+			<h3>請輸入年齡:</h3>
+			<input type="text" name="age" id="age" />
+
+			<button type="submit">提交</button>
+		</form>
+		
+	</div>
+
+</body>
+</html>
