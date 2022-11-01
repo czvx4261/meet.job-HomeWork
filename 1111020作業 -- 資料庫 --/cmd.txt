@@ -1,0 +1,25 @@
+mysql -u root -p
+123456789
+
+create database jobs default character set utf8 collate utf8_general_ci;
+
+show databases;
+
+use jobs
+
+create table employee(
+    id int primary key auto_increment,
+    name varchar(20),
+    sex varchar(2),
+    tel varchar(12),
+    assume date ) ;
+
+create table works(
+    id int primary key auto_increment,
+    items varchar(100),
+    info text,
+    employeeid int  );
+
+
+
+
