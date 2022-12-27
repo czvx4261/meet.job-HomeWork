@@ -1,2 +1,0 @@
-sublime text 網站編譯器
-git 版本控制
